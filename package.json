@@ -1,6 +1,6 @@
 {
   "name": "@julian_cataldo/retext-case-police",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A `retext` plugin for checking popular names casing.",
   "type": "module",
   "source": "./index.ts",
