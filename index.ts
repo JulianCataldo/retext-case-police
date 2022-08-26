@@ -3,7 +3,7 @@
  *                      See LICENSE in the project root.                       *
 /* —————————————————————————————————————————————————————————————————————————— */
 
-import abbreviates from 'case-police/dict/abbreviates.json' assert { type: 'json' };
+import abbrs from 'case-police/dict/abbreviates.json' assert { type: 'json' };
 import brands from 'case-police/dict/brands.json' assert { type: 'json' };
 import general from 'case-police/dict/general.json' assert { type: 'json' };
 import products from 'case-police/dict/products.json' assert { type: 'json' };
@@ -20,7 +20,7 @@ import { toString } from 'nlcst-to-string';
 
 export type Dict = Record<string, string>;
 const casePoliceDicts: Dict = {
-  ...abbreviates,
+  ...abbrs,
   ...brands,
   ...general,
   ...products,
