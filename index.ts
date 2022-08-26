@@ -9,10 +9,10 @@ import general from 'case-police/dict/general.json' assert { type: 'json' };
 import products from 'case-police/dict/products.json' assert { type: 'json' };
 import softwares from 'case-police/dict/softwares.json' assert { type: 'json' };
 /* ·········································································· */
-import type { Plugin } from 'unified';
 import { search } from 'nlcst-search';
-import type { Root } from 'nlcst-search';
 import { toString } from 'nlcst-to-string';
+import type { Plugin } from 'unified';
+import type { Root } from 'nlcst-search';
 /* ·········································································· */
 // TODO: Add URL reference to message / hint like `remark-lint` rules
 // import { homepage } from './package.json' assert { type: 'json' };
