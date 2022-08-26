@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/JulianCataldo/retext-case-police/compare/v1.0.0...v1.0.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* add badges and quick start to root readme ([b2c18ff](https://github.com/JulianCataldo/retext-case-police/commit/b2c18ffbdd47e3b0f0fc6e69aed81e6ae47166dd))
+
 # 1.0.0 (2022-08-26)
 
 
