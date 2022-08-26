@@ -31,8 +31,8 @@ const casePoliceKeys = Object.entries(casePoliceDicts).map(([key]) => key);
 const retextCasePolice: Plugin<[], Root> = () => (tree, file) => {
   search(tree, casePoliceKeys, (nodes) => {
     const original = toString(nodes);
-    const originalLowercased = original.toLowerCase();
-    const correctOne = casePoliceDicts[originalLowercased];
+    const originalLowerCased = original.toLowerCase();
+    const correctOne = casePoliceDicts[originalLowerCased];
 
     if (original !== correctOne) {
       if (nodes[0].type === 'WordNode') {
