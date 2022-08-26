@@ -1,7 +1,5 @@
 # `retext-case-police`
 
-A `retext` plugin for checking popular names casing.
-
 [![NPM](https://img.shields.io/npm/v/@julian_cataldo/retext-case-police)](https://www.npmjs.com/package/@julian_cataldo/retext-case-police)
 [![ISC License](https://img.shields.io/npm/l/@julian_cataldo/remark-lint-frontmatter-schema)](./LICENSE)
 [![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?logo=visual%20studio%20code)](https://code.visualstudio.com)
@@ -12,6 +10,14 @@ A `retext` plugin for checking popular names casing.
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 
+A `retext` plugin for checking popular names casing.
+
+Dictionaries are from [`case-police`](https://github.com/antfu/case-police).
+
+# Demo
+
+![Demo screenshot of this retext plugin](./docs/screenshot.png)
+
 # Quick start
 
 ## Installation
@@ -19,6 +25,8 @@ A `retext` plugin for checking popular names casing.
 ```sh
 pnpm install @julian_cataldo/retext-case-police
 ```
+
+## Usage
 
 ```ts
 import retextCasePolice from '@julian_cataldo/retext-case-police';
