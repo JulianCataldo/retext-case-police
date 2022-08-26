@@ -1,0 +1,8 @@
+node_modules
+.parcel-cache
+.DS_Store
+.dev
+dist
+demo/pnpm-lock.yaml
+
+**/.vscode/settings.json
