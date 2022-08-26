@@ -55,6 +55,10 @@ import retextCasePolice from '@julian_cataldo/retext-case-police';
 // …
 ```
 
+## To do
+
+- [ ] Custom dictionaries embedding
+
 ---
 
 See [CHANGELOG.md](./CHANGELOG.md) for release history.
