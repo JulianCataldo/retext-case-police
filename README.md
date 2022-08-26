@@ -12,6 +12,25 @@
 
 A `retext` plugin for checking popular names casing.
 
+Examples:
+
+- ⚠️ `macbook` → ✅ **`MacBook`**
+- ⚠️ `MacOS` → ✅ **`macOS`**
+- 🤔…
+- ⚠️ `ESBuild` → ✅ **`esbuild`**
+- ⚠️ `eslint` → ✅ **`ESLint`**
+- 😭…
+
+For:
+
+- [Abbreviates](https://github.com/antfu/case-police/blob/main/dict/abbreviates.json)
+- [Brands](https://github.com/antfu/case-police/blob/main/dict/brands.json)
+- [General](https://github.com/antfu/case-police/blob/main/dict/general.json)
+- [Products](https://github.com/antfu/case-police/blob/main/dict/products.json)
+- [Softwares](https://github.com/antfu/case-police/blob/main/dict/softwares.json)
+
+---
+
 Dictionaries are from [`case-police`](https://github.com/antfu/case-police).
 
 # Demo
