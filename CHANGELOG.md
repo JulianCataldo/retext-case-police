@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/JulianCataldo/retext-case-police/compare/v1.0.1...v1.0.2) (2022-08-26)
+
+
+### Bug Fixes
+
+* re-put reference to case-police + screenshot ([2253be6](https://github.com/JulianCataldo/retext-case-police/commit/2253be641860538aaeb71f79fbdd63d6b9a1e57c))
+
 ## [1.0.1](https://github.com/JulianCataldo/retext-case-police/compare/v1.0.0...v1.0.1) (2022-08-26)
 
 
