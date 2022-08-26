@@ -17,7 +17,7 @@
     "nlcst-to-string": "^3.1.0"
   },
   "devDependencies": {
-    "@julian_cataldo/astro-configs": "0.16.0",
+    "@julian_cataldo/astro-configs": "0.16.1",
     "@parcel/core": "2.7.0",
     "@parcel/packager-ts": "2.7.0",
     "@parcel/transformer-js": "2.7.0",
@@ -67,6 +67,7 @@
     "lint",
     "remark",
     "validation",
+    "casing",
     "linting",
     "linter",
     "plugin",
