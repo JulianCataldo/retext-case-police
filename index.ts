@@ -3,6 +3,7 @@
  *                      See LICENSE in the project root.                       *
 /* —————————————————————————————————————————————————————————————————————————— */
 
+// FIXME: `assert { type: 'json' }` is stripped out by Parcel!
 import abbrs from 'case-police/dict/abbreviates.json' assert { type: 'json' };
 import brands from 'case-police/dict/brands.json' assert { type: 'json' };
 import general from 'case-police/dict/general.json' assert { type: 'json' };
@@ -14,8 +15,7 @@ import { search } from 'nlcst-search';
 import type { Root } from 'nlcst-search';
 import { toString } from 'nlcst-to-string';
 /* ·········································································· */
-// TODO: Add URL reference to message / hint like `remark-lint` rules
-// import { homepage } from './package.json' assert { type: 'json' };
+import { homepage } from './package.json' assert { type: 'json' };
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export type Dict = Record<string, string>;
@@ -28,22 +28,35 @@ const casePoliceDicts: Dict = {
 };
 const casePoliceKeys = Object.entries(casePoliceDicts).map(([key]) => key);
 
-const retextCasePolice: Plugin<[], Root> = () => (tree, file) => {
-  search(tree, casePoliceKeys, (nodes) => {
-    const original = toString(nodes);
-    const originalLowerCased = original.toLowerCase();
-    const correctOne = casePoliceDicts[originalLowerCased];
+export interface Settings {
+  /** List of words to ignore */
+  ignore?: string[];
+}
+const retextCasePolice: Plugin<[Settings], Root> =
+  (settings = {}) =>
+  (tree, file) => {
+    const ignore = settings.ignore ?? [];
 
-    if (original !== correctOne) {
+    search(tree, casePoliceKeys, (nodes) => {
+      const actual = toString(nodes);
+      const actualLowerCased = actual.toLowerCase();
+      const expected = casePoliceDicts[actualLowerCased];
+
+      // NOTE: Checking `WordNode` is redundant? (https://github.com/retextjs/retext/pull/78#issuecomment-1233442116)
       if (nodes[0].type === 'WordNode') {
-        file.message(
-          `"${original}" must be spelled "${correctOne}"`,
-          nodes[0].children[0],
-          `retext-case-police:${correctOne}`,
-        );
+        if (!ignore.includes(expected) && actual !== expected) {
+          const msg = file.message(
+            `Expected casing of \`${expected}\` instead of \`${actual}\``,
+            nodes[0].children[0],
+            `retext-case-police:${expected}`,
+          );
+          msg.ruleId = 'retext-case-police';
+          msg.actual = actual;
+          msg.expected = [expected];
+          msg.url = homepage;
+        }
       }
-    }
-  });
-};
+    });
+  };
 
 export default retextCasePolice;
