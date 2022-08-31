@@ -60,7 +60,10 @@ import retextCasePolice from '@julian_cataldo/retext-case-police';
 
 ## To do
 
-- [ ] Custom dictionaries embedding
+- [x] Ignore words
+- [ ] Resolve Parcel stripping out `assert { type: 'json' }`
+- [ ] Ignore links (e.g `https://` wrongly flagged)
+- [ ] Custom dictionaries embedding?
 
 ---
 
