@@ -3,7 +3,6 @@
  *                      See LICENSE in the project root.                       *
 /* —————————————————————————————————————————————————————————————————————————— */
 
-// FIXME: `assert { type: 'json' }` is stripped out by Parcel!
 import abbrs from 'case-police/dict/abbreviates.json' assert { type: 'json' };
 import brands from 'case-police/dict/brands.json' assert { type: 'json' };
 import general from 'case-police/dict/general.json' assert { type: 'json' };
@@ -15,7 +14,7 @@ import { search } from 'nlcst-search';
 import type { Root } from 'nlcst-search';
 import { toString } from 'nlcst-to-string';
 /* ·········································································· */
-import { homepage } from './package.json' assert { type: 'json' };
+import * as packageJson from './package.json' assert { type: 'json' };
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export type Dict = Record<string, string>;
@@ -50,10 +49,11 @@ const retextCasePolice: Plugin<[Settings], Root> =
             nodes[0].children[0],
             `retext-case-police:${expected}`,
           );
+          // `ruleId` and `expected` seems redundant with `origin`, should do visual tests with IDE, CLI, Monaco, etc.
           msg.ruleId = 'retext-case-police';
           msg.actual = actual;
           msg.expected = [expected];
-          msg.url = homepage;
+          msg.url = packageJson.homepage;
         }
       }
     });
