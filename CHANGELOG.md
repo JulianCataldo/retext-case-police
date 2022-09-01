@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.2...v1.1.3) (2022-09-01)
+
+
+### Bug Fixes
+
+* add typing for no settings ([c0f3c68](https://github.com/JulianCataldo/retext-case-police/commit/c0f3c687c9f436466fd4907fee247ba47a3b51aa))
+* direct import json object ([f749818](https://github.com/JulianCataldo/retext-case-police/commit/f749818b2cb5367ef9c292747c38ce7bde921a50))
+
 ## [1.1.2](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.1...v1.1.2) (2022-09-01)
 
 
