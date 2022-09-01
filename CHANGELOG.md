@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.0...v1.1.1) (2022-09-01)
+
+
+### Bug Fixes
+
+* add settings usage to docs ([eb02eb3](https://github.com/JulianCataldo/retext-case-police/commit/eb02eb3629a57dd6cf5e7717437ac0947ad69d10))
+
 # [1.1.0](https://github.com/JulianCataldo/retext-case-police/compare/v1.0.3...v1.1.0) (2022-08-31)
 
 
