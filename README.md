@@ -54,8 +54,11 @@ import retextCasePolice from '@julian_cataldo/retext-case-police';
   .use(retextCasePolice)
 // …
 
+// ——————— With options ————v
+
 // Ignore words
   .use(retextCasePolice, { ignore: ['GitHub'] })
+
 ```
 
 ## To do
