@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/JulianCataldo/retext-case-police/compare/v1.0.3...v1.1.0) (2022-08-31)
+
+
+### Features
+
+* more infos, ignore settings, rephrase reason ([e603368](https://github.com/JulianCataldo/retext-case-police/commit/e60336885702b94bb3a2f03c57f70ac770d48dda))
+
 ## [1.0.3](https://github.com/JulianCataldo/retext-case-police/compare/v1.0.2...v1.0.3) (2022-08-26)
 
 
