@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.1...v1.1.2) (2022-09-01)
+
+
+### Bug Fixes
+
+* use tsc instead of parcel ([7c9b9af](https://github.com/JulianCataldo/retext-case-police/commit/7c9b9af8900d6ee1d0b6623c62d7af45b1be2649))
+
 ## [1.1.1](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.0...v1.1.1) (2022-09-01)
 
 
