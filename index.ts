@@ -14,7 +14,7 @@ import { search } from 'nlcst-search';
 import type { Root } from 'nlcst-search';
 import { toString } from 'nlcst-to-string';
 /* ·········································································· */
-import * as packageJson from './package.json' assert { type: 'json' };
+import packageJson from './package.json' assert { type: 'json' };
 /* —————————————————————————————————————————————————————————————————————————— */
 
 export type Dict = Record<string, string>;
