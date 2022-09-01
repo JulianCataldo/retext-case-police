@@ -31,7 +31,7 @@ export interface Settings {
   /** List of words to ignore */
   ignore?: string[];
 }
-const retextCasePolice: Plugin<[Settings], Root> =
+const retextCasePolice: Plugin<[Settings] | [], Root> =
   (settings = {}) =>
   (tree, file) => {
     const ignore = settings.ignore ?? [];
