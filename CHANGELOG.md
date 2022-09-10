@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.3...v1.1.4) (2022-09-10)
+
+
+### Bug Fixes
+
+* wrong node place / children ([a736d5d](https://github.com/JulianCataldo/retext-case-police/commit/a736d5ded55ebc04beab4c993d35324a91c07ec0)), closes [/github.com/retextjs/retext/pull/78#issuecomment-1233888024](https://github.com//github.com/retextjs/retext/pull/78/issues/issuecomment-1233888024)
+
 ## [1.1.3](https://github.com/JulianCataldo/retext-case-police/compare/v1.1.2...v1.1.3) (2022-09-01)
 
 
