@@ -13,9 +13,9 @@ import type { Plugin } from 'unified';
 import { search } from 'nlcst-search';
 import type { Root } from 'nlcst-search';
 import { toString } from 'nlcst-to-string';
-/* ·········································································· */
-import packageJson from './package.json' assert { type: 'json' };
 /* —————————————————————————————————————————————————————————————————————————— */
+
+const url = 'https://github.com/JulianCataldo/retext-case-police';
 
 export type Dict = Record<string, string>;
 const casePoliceDicts: Dict = {
@@ -53,8 +53,7 @@ const retextCasePolice: Plugin<[Settings] | [], Root> =
           msg.ruleId = 'retext-case-police';
           msg.actual = actual;
           msg.expected = [expected];
-          msg.url = packageJson.homepage;
-        }
+        msg.url = url;
       }
     });
   };
