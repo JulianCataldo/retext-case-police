@@ -25,7 +25,7 @@ const casePoliceDicts: Dict = {
   ...products,
   ...softwares,
 };
-const casePoliceKeys = Object.entries(casePoliceDicts).map(([key]) => key);
+const casePoliceKeys = Object.entries(casePoliceDicts).map(([token]) => token);
 
 export interface Settings {
   /** List of words to ignore */
@@ -41,18 +41,15 @@ const retextCasePolice: Plugin<[Settings] | [], Root> =
       const actualLowerCased = actual.toLowerCase();
       const expected = casePoliceDicts[actualLowerCased];
 
-      // NOTE: Checking `WordNode` is redundant? (https://github.com/retextjs/retext/pull/78#issuecomment-1233442116)
-      if (nodes[0].type === 'WordNode') {
-        if (!ignore.includes(expected) && actual !== expected) {
-          const msg = file.message(
-            `Expected casing of \`${expected}\` instead of \`${actual}\``,
-            nodes[0].children[0],
-            `retext-case-police:${expected}`,
-          );
-          // `ruleId` and `expected` seems redundant with `origin`, should do visual tests with IDE, CLI, Monaco, etc.
-          msg.ruleId = 'retext-case-police';
-          msg.actual = actual;
-          msg.expected = [expected];
+      if (!ignore.includes(expected) && actual !== expected) {
+        const msg = file.message(
+          `Expected casing of \`${expected}\` instead of \`${actual}\``,
+          nodes[0],
+          `retext-case-police:${expected}`,
+        );
+        msg.ruleId = 'retext-case-police';
+        msg.actual = actual;
+        msg.expected = [expected];
         msg.url = url;
       }
     });
