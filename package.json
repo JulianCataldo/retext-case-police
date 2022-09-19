@@ -73,6 +73,9 @@
     "vscode",
     "tooling"
   ],
+  "engines": {
+    "node": ">=17"
+  },
   "publishConfig": {
     "access": "public"
   }

@@ -45,6 +45,9 @@ Dictionaries are from [`case-police`](https://github.com/antfu/case-police).
 pnpm install @julian_cataldo/retext-case-police
 ```
 
+> **Note**: 100% **ESM**, including dependencies  
+> For Node.js **17** and higher (using JSON import assertions) or with `--experimental-json-modules` flag with Node **16**.
+
 ## Usage
 
 ```ts
