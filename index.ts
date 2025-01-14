@@ -39,7 +39,8 @@ const retextCasePolice: Plugin<[Settings] | [], Root> =
     search(tree, casePoliceKeys, (nodes) => {
       const actual = toString(nodes);
       const actualLowerCased = actual.toLowerCase();
-      const expected = casePoliceDicts[actualLowerCased];
+      const actualLowerCasedNoHyphens = actual.toLowerCase().replace(/-/g, '');
+      const expected = casePoliceDicts[actualLowerCased] ?? casePoliceDicts[actualLowerCasedNoHyphens];
 
       if (!ignore.includes(expected) && actual !== expected) {
         const msg = file.message(
